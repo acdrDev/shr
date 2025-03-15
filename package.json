@@ -1,5 +1,5 @@
 {
-  "name": "puppeteer-hot-reloading",
+  "name": "shr",
   "version": "0.0.1",
   "description": "Hot reloading for scrapping with puppeteer",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "reloading",
     "scrap"
   ],
-  "author": "Andres Felipe Rojas Gonzalez (@acdrDev)",
+  "author": "Andres Felipe Rojas Gonzalez <acdr260@gmail.com> (@acdrDev)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/acdrDev/puppeteer-hot-reloading/issues"
