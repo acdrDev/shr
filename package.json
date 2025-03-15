@@ -1,6 +1,6 @@
 {
   "name": "@acdrdev/shr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hot reloading for scrapping with puppeteer",
   "main": "dist/index.js",
   "files": [
