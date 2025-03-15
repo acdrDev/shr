@@ -4,7 +4,7 @@
 ### How to use?
 - Install package
 ```
-  npm install shr
+  npm install @acdrdev/shr
 ```
 - Call shrConfig function in the file where you are working and pass the root dir in your project (e.g., "./src") and all the variables you will need, also use "//@star-work-block" and "//@end-work-block" to indicate the specific code block you are going to work with, e.g.:
 ```javascript
