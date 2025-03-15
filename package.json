@@ -1,5 +1,5 @@
 {
-  "name": "shr",
+  "name": "@acdrdev/shr",
   "version": "0.0.1",
   "description": "Hot reloading for scrapping with puppeteer",
   "main": "dist/index.js",
@@ -31,7 +31,7 @@
     "typescript": "5.7.3"
   },
   "dependencies": {
-    "chokidar": "^4.0.3",
-    "puppeteer": "^24.4.0"
+    "chokidar": "4.0.3",
+    "puppeteer": "24.4.0"
   }
 }
