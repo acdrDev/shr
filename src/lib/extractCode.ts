@@ -11,19 +11,19 @@ const extractCode = (fileContent: string): { code: string, opts: IOpts } => {
   }
 
   if(endCode == -1 && startCode != -1){
-    const opts = getOpt(splitContent[startCode])
-    return { code: splitContent[startCode + 1], opts }
+    const opts = getOpt(String(splitContent[startCode]))
+    return { code: String(splitContent[startCode + 1]), opts }
   }
 
   if(endCode != -1 && startCode == -1){
-    let opts = getOpt(splitContent[endCode])
-    return { code: splitContent[endCode - 1], opts }
+    let opts = getOpt(String(splitContent[endCode]))
+    return { code: String(splitContent[endCode - 1]), opts }
   }
 
   if(endCode != -1 && startCode != -1){
-    let opts = getOpt(splitContent[startCode])
-    opts = getOpt(splitContent[endCode], opts)
-    const code = splitContent.slice(startCode, endCode).join("\n")
+    let opts = getOpt(String(splitContent[startCode]))
+    opts = getOpt(String(splitContent[endCode]), opts)
+    const code = String(splitContent.slice(startCode, endCode).join("\n"))
     return { code, opts }
   }
 
@@ -45,7 +45,7 @@ const getOpt = (stringOpts: string, defaultOpts?: IOpts): IOpts => {
 
   splitOpts.forEach((opt) => {
     let value = opt.split(':')
-    opts[value[0].trim()] = value[1].trim()
+    opts[value[0]?.trim() as keyof IOpts || 'pageIndex'] = String(value[1]?.trim()) || '0'
   })
 
   return opts
