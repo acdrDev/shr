@@ -10,6 +10,9 @@ const watcher = async (browserInstance: any) => {
     console.log(dir)
     watch(dir).on("change", async (path) => {
       console.log(path)
+
+      if(path.includes("node_modules") || path.includes("dist")) return null
+      
       const content = fs.readFileSync(path, "utf-8")
       const { code, opts } = extractCode(content)
 
